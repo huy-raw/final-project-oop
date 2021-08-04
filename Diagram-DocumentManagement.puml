@@ -1,0 +1,29 @@
+@startuml
+
+class DocumentManagement {
+    -documentList: LinkedList<Document>
+    
+    +void createDocument()
+    +void deleteDocument()
+    +void updateDocument()
+    +void display()
+    -int checkIDAvailable(String ID)
+
+    +void exportToFile()
+    +void saveDocumentDatabase()
+
+    +void listDocumentByID()
+    +void listDocumentByName()
+    +void listDocumentByPublisher()
+    +void listDocumentByType()
+
+
+    +void sortThenList()
+
+    -void printAfterSort()
+    -void sortByID()
+    -void sortByPublisher()
+    -void sortByReleaseNumber()
+}
+
+@enduml

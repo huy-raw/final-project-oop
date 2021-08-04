@@ -1,0 +1,38 @@
+@startuml
+
+enum DocumentType {
+    BOOK
+    MAGAZINE
+    NEWSPAPER
+}
+
+abstract class Document {
+    #ID: String
+    #nameDocument: String
+    #publisher: String
+    #releaseNumber: int
+    #type: DocumentType
+
+    + void displayDetail()
+    + String toExportedFileFormat()
+}
+
+class Book {
+    -author: String
+    -numberOfPages: int
+}
+
+class Magazine {
+    -issueNumber: String
+    -releaseMonth: String
+}
+
+class Newspaper {
+    -publicDate: Date
+}
+
+Document <|-- Book
+Document <|-- Magazine
+Document <|-- Newspaper
+
+@enduml

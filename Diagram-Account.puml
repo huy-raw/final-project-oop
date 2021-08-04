@@ -1,0 +1,33 @@
+@startuml
+
+enum AccountType {
+    GUEST
+    ADMIN
+}
+
+class Account {
+    -type: AccountType
+    -username: String 
+    -password: String 
+}
+
+interface IAccount {
+    +boolean isAdmin()
+    +boolean isGuest()
+}
+
+class Authentication {
+    -currentLoggedAccount: Account
+    -accountList: ArrayList<Account>
+}
+
+interface IAuthentication {
+    +void saveAuthData()
+    +boolean registerAccount()
+    +boolean loginAccount(boolean isGuest)
+}
+
+IAuthentication <|-- Authentication
+IAccount <|-- Account
+
+@enduml
