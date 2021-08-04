@@ -1,5 +1,5 @@
-# Welcome to the project OOP
-# This is the LIBRARY MANAGEMENT SYSTEM
+# Welcome to the project OOP - LIBRARY MANAGEMENT SYSTEM
+
 ## You will find in this repo:
 
 * NetBeans Apache Ant project including JUnit Test
